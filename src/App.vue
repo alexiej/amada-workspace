@@ -1,5 +1,13 @@
 <template>
   <div id="app">
+    <div id="topwindow">
+      Header
+    </div>
+    <div>
+      <a-date-picker/>
+      <a-pagination :total="50" />
+         <a-button type="primary">Primary</a-button>
+      </div>
     <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
@@ -25,5 +33,10 @@
       color: #42b983;
     }
   }
+}
+
+#topwindow {
+  background:red;
+  -webkit-app-region: drag;
 }
 </style>
