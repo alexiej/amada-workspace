@@ -11,7 +11,7 @@
     "postinstall": "electron-builder install-app-deps",
     "postuninstall": "electron-builder install-app-deps",
     "test:e2e": "vue-cli-service  test:e2e",
-    "test:unit": "vue-cli-service test:unit --reporter nyan --watch"
+    "test:unit": "vue-cli-service test:unit --watch"
   },
   "main": "background.js",
   "dependencies": {
@@ -37,6 +37,7 @@
     "sass": "^1.18.0",
     "sass-loader": "^7.1.0",
     "vue-cli-plugin-electron-builder": "^1.2.0",
+    "vue-cli-plugin-scss-base": "^0.1.10",
     "vue-template-compiler": "^2.5.21"
   }
 }

@@ -8619,6 +8619,10 @@ vue-cli-plugin-electron-builder@^1.2.0:
     webpack-chain "^5.0.0"
     yargs "^13.2.2"
 
+vue-cli-plugin-scss-base@^0.1.10:
+  version "0.1.10"
+  resolved "https://registry.yarnpkg.com/vue-cli-plugin-scss-base/-/vue-cli-plugin-scss-base-0.1.10.tgz#688c026ff8b857558b5538f46a81ddee37a65807"
+
 vue-eslint-parser@^2.0.3:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/vue-eslint-parser/-/vue-eslint-parser-2.0.3.tgz#c268c96c6d94cfe3d938a5f7593959b0ca3360d1"

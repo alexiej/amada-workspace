@@ -1,13 +1,5 @@
 <template>
   <div id="app">
-    <div id="topwindow">
-      Header
-    </div>
-    <div>
-      <a-date-picker/>
-      <a-pagination :total="50" />
-         <a-button type="primary">Primary</a-button>
-      </div>
     <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
@@ -17,26 +9,5 @@
 </template>
 
 <style lang="scss">
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-#nav {
-  padding: 30px;
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
-}
-
-#topwindow {
-  background:red;
-  -webkit-app-region: drag;
-}
+  @import '@/scss/base.scss';
 </style>

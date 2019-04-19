@@ -1,7 +1,3 @@
-const JSONa = {
- a: 'a'
+export default function add_two(a,b){
+  return a+b;
 }
-
-
-var a = JSON.stringify('a')
-console.log(a)
