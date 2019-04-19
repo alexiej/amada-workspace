@@ -14,9 +14,10 @@ storiesOf('Button', module)
   .add('with JSX', () => ({
     components: { MyButton },
     render() {
-      return <my-button onClick={this.action}>With JSX</my-button>;
+      return <button onClick={this.action}>This is With JSX</button>;
     },
-    methods: { action: linkTo('Button', 'with some emoji') }
+    methods: {action: action('click me') }
+    // methods: { action: linkTo('Button', 'with some emoji') }
   }))
   .add('with some emoji', () => ({
     components: { MyButton },
