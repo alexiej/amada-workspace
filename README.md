@@ -1,34 +1,24 @@
 # amada-workspace
 
-## Project setup
-```
-yarn install
-```
+## Project Views
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
+### Main View
 
-### Compiles and minifies for production
-```
-yarn build
-```
+![image-20191115212213308](assets/main-view.gif)
 
-### Run your unit tests
-```
-yarn test:unit
-```
+### Resources
 
-### Run your end-to-end tests
-```
-yarn test:e2e
-```
+![image-20191115212213308](assets/main-resources.gif)
 
-### Lints and fixes files
-```
-yarn lint
-```
+### Configuration
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+![image-20191115212213308](assets/main-configuration.gif)
+
+### Documentation
+
+![image-20191115212213308](assets/main-documentation.gif)
+
+### Code editing
+
+![image-20191115212213308](assets/main-code.gif)
+
