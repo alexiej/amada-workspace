@@ -20,7 +20,7 @@ Project in the concept stage of how to manage the whole bunch of additional stuf
 
 ![image-20191115212213308](assets/main-documentation.gif)
 
-### Code editing
+### Code editing 
 
 ![image-20191115212213308](assets/main-code.gif)
 
