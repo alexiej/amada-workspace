@@ -1,7 +1,8 @@
 module.exports = {
   root: true,
   env: {
-    node: true
+    node: true,
+    jest: true
   },
   'extends': [
     'plugin:vue/essential',
@@ -9,8 +10,15 @@ module.exports = {
     '@vue/typescript'
   ],
   rules: {
-    'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
-    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off'
+    'no-console': 'off',
+    'no-debugger': 'off',
+    'no-unreachable': 'off',
+    'no-empty': 'off',
+    'no-func-assign': 'off',
+    'no-unreachable': 'off',
+    'getter-return': 'off',
+    'no-unsafe-finally': 'off',
+    'no-mixed-spaces-and-tabs': 'off'
   },
   parserOptions: {
     parser: '@typescript-eslint/parser'

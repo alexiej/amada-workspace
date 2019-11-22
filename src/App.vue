@@ -1,29 +1,77 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+    <div id="left-bar">
+      <button class="bar">
+        <i class="fas fa-university"></i>
+      </button>
+    </div>
+
+    <div id="content" class="content">
+      
+      <button>
+        <i class="fas fa-university"></i>
+        This is button
+      </button>nicotn
+      <div class="round">This is text</div>
+      <HelloWorld class="content" msg="Welcome to Your Vue.js App" />
+    </div>
   </div>
 </template>
 
-<script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
-import HelloWorld from './components/HelloWorld.vue';
+<script>
+import HelloWorld from "./components/HelloWorld.vue";
 
-@Component({
-  components: {
-    HelloWorld,
+export default {
+  name: "app",
+  data() {
+    return {
+      imgsr: 'assets/icons/unicorn.png'
+    }
+
   },
-})
-export default class App extends Vue {}
+  components: {
+    HelloWorld
+  }
+};
 </script>
 
 <style lang="scss">
+@import "@/scss/base.scss";
+
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  width: 100%;
+  height: 100%;
+
+  // display: grid;
+  // grid-template-columns: $icon-width 1fr;
+  // grid-template-rows: 1fr;
+  // grid-template-areas: ".";
+  // background: $primary;
+}
+
+#content {
+  margin-left: $icon-width ;
+}
+
+#left-bar {
+  background: $grey-bar;
+   overflow: hidden;
+  position: sticky;
+  top: 0;
+
+   height: 100%; /* Full-height: remove this if you want "auto" height */
+  width: $icon-width ; /* Set the width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+    // position: absolute;
+  //  height: 100%;
+}
+
+img {
+  svg {
+    fill: red;
+  }
 }
 </style>

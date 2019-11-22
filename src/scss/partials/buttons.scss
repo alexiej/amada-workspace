@@ -1,0 +1,75 @@
+// extenders
+.animate {
+    transition: all 0.3s;
+}
+
+button {
+    margin: 0.5rem;
+    padding: 0.7rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border: 1px solid $primary;
+    background: $white;
+    border-radius: 5px;
+    color: $primary-dark;
+    // font-weight: bold;
+    min-width: 290px;
+
+    font-size: $text-x-small;
+
+    transition: all 0.3s;
+
+    transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+    &:hover {
+      box-shadow: 0 0 40px 40px $primary inset;
+      color: $white;
+      outline: 0;
+    }
+
+    &:active {
+        transform: scale(0.95);
+      }
+
+    // &:focus {
+    //   background: $primary;
+    //   color: $white;
+    //   outline: 0;
+    // }
+
+}
+
+
+button.bar {
+    width: $icon-width;
+    height: $icon-width;
+    border: 0px;
+    padding: 0;
+    margin: 0;
+    min-width: auto;
+    border-radius: 0;
+    background: transparent;
+    color: $white;
+    transition: none;
+
+    > svg, .svg-inline--fa.fa-w-16 {
+        width: $icon-width;
+        height: $icon-width;
+        padding: 8px;
+    }
+
+    &:hover {
+        background: $white;
+        // color: $primary;
+        // transform: skewX(2);
+        // box-shadow: 0 0 40px 40px $primary inset;
+        // color: $white;
+        outline: 0;
+      }
+
+
+      &:active {
+        // background: $primary;
+        transform: scale(0.75);
+      }
+    
+}

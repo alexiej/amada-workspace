@@ -1,6 +1,9 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
+    A
+    <logo style="fill: pink"/>
+   A 
     <p>
       For a guide and recipes on how to configure / customize this project,<br>
       check out the
@@ -34,19 +37,39 @@
   </div>
 </template>
 
-<script lang="ts">
-import { Component, Prop, Vue } from 'vue-property-decorator';
+<script>
 
-@Component
-export default class HelloWorld extends Vue {
-  @Prop() private msg!: string;
+import { Component, Prop, Vue } from 'vue-property-decorator';
+import VueLogo from '../assets/icons/unicorn.svg';
+import cmp from './cmp'
+
+console.log(VueLogo)
+
+// @Component
+// export default class HelloWorld extends Vue {
+export default {
+  // @Prop() private msg!: string;
+   name: "HelloWorld",
+      data() {
+        return {
+          msg: 'assets/icons/unicorn.png'
+        }
+
+      },
+  components: {
+    'logo': VueLogo
+  }
+
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+
+
 h3 {
   margin: 40px 0 0;
+  // background: $primary;
 }
 ul {
   list-style-type: none;
@@ -56,7 +79,7 @@ li {
   display: inline-block;
   margin: 0 10px;
 }
-a {
-  color: #42b983;
-}
+// a {
+//   color: $primary;
+// }
 </style>
