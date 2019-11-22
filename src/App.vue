@@ -2,8 +2,16 @@
   <div id="app">
     <div id="left-bar">
       <button class="bar">
-        <i class="fas fa-university"></i>
+        <logo/>
+     
       </button>
+
+       <button class="bar">
+
+       <i class="far fa-file"></i>
+     
+      </button>
+
     </div>
 
     <div id="content" class="content">
@@ -20,6 +28,7 @@
 
 <script>
 import HelloWorld from "./components/HelloWorld.vue";
+import Logo from "./assets/icons/unicorn.svg";
 
 export default {
   name: "app",
@@ -30,7 +39,8 @@ export default {
 
   },
   components: {
-    HelloWorld
+    HelloWorld,
+    Logo
   }
 };
 </script>
@@ -41,12 +51,6 @@ export default {
 #app {
   width: 100%;
   height: 100%;
-
-  // display: grid;
-  // grid-template-columns: $icon-width 1fr;
-  // grid-template-rows: 1fr;
-  // grid-template-areas: ".";
-  // background: $primary;
 }
 
 #content {
