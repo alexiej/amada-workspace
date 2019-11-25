@@ -624,7 +624,7 @@
             console.info(progressIndicator);
           }
 
-          if (result) {
+          if (!!result) {
             // eslint-disable-line no-extra-boolean-cast
             resolve(result);
           } else {

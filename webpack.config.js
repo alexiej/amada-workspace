@@ -19,17 +19,9 @@
   resolve: {
     alias: {
       '@': '/Users/klemenka/PROJECTS/FINAL_PROJECTS/amada-workspace/src',
-      vue$: '/Users/klemenka/PROJECTS/FINAL_PROJECTS/amada-workspace/node_modules/vue/dist/vue.esm.js',
-      atoms: '/Users/klemenka/PROJECTS/FINAL_PROJECTS/amada-workspace/src/components/atoms',
-      molecules: '/Users/klemenka/PROJECTS/FINAL_PROJECTS/amada-workspace/src/components/molecules',
-      organisms: '/Users/klemenka/PROJECTS/FINAL_PROJECTS/amada-workspace/src/components/organisms',
-      templates: '/Users/klemenka/PROJECTS/FINAL_PROJECTS/amada-workspace/src/components/templates',
-      pages: '/Users/klemenka/PROJECTS/FINAL_PROJECTS/amada-workspace/src/components/pages',
-      store: '/Users/klemenka/PROJECTS/FINAL_PROJECTS/amada-workspace/src/store'
+      vue$: 'vue/dist/vue.runtime.esm.js'
     },
     extensions: [
-      '.tsx',
-      '.ts',
       '.mjs',
       '.js',
       '.jsx',
@@ -45,7 +37,6 @@
   },
   resolveLoader: {
     modules: [
-      '/Users/klemenka/PROJECTS/FINAL_PROJECTS/amada-workspace/node_modules/@vue/cli-plugin-typescript/node_modules',
       '/Users/klemenka/PROJECTS/FINAL_PROJECTS/amada-workspace/node_modules/@vue/cli-plugin-babel/node_modules',
       'node_modules',
       '/Users/klemenka/PROJECTS/FINAL_PROJECTS/amada-workspace/node_modules',
@@ -64,7 +55,7 @@
             loader: 'cache-loader',
             options: {
               cacheDirectory: '/Users/klemenka/PROJECTS/FINAL_PROJECTS/amada-workspace/node_modules/.cache/vue-loader',
-              cacheIdentifier: '214d4245'
+              cacheIdentifier: '1bf7b730'
             }
           },
           /* config.module.rule('vue').use('vue-loader') */
@@ -75,7 +66,7 @@
                 whitespace: 'condense'
               },
               cacheDirectory: '/Users/klemenka/PROJECTS/FINAL_PROJECTS/amada-workspace/node_modules/.cache/vue-loader',
-              cacheIdentifier: '214d4245'
+              cacheIdentifier: '1bf7b730'
             }
           }
         ]
@@ -102,14 +93,16 @@
       /* config.module.rule('svg') */
       {
         test: /\.(svg)(\?.*)?$/,
+        exclude: [
+          /icons\/(.*)\.svg/
+        ],
         use: [
-          /* config.module.rule('svg').use('babel-loader') */
+          /* config.module.rule('svg').use('file-loader') */
           {
-            loader: 'babel-loader'
-          },
-          /* config.module.rule('svg').use('vue-svg-loader') */
-          {
-            loader: 'vue-svg-loader'
+            loader: 'file-loader',
+            options: {
+              name: 'img/[name].[hash:8].[ext]'
+            }
           }
         ]
       },
@@ -148,6 +141,41 @@
                 }
               }
             }
+          }
+        ]
+      },
+      /* config.module.rule('pug') */
+      {
+        test: /\.pug$/,
+        oneOf: [
+          /* config.module.rule('pug').oneOf('pug-vue') */
+          {
+            resourceQuery: /vue/,
+            use: [
+              /* config.module.rule('pug').oneOf('pug-vue').use('pug-plain-loader') */
+              {
+                loader: 'pug-plain-loader'
+              }
+            ]
+          },
+          /* config.module.rule('pug').oneOf('pug-template') */
+          {
+            use: [
+              /* config.module.rule('pug').oneOf('pug-template').use('raw') */
+              {
+                loader: 'raw-loader'
+              },
+              /* config.module.rule('pug').oneOf('pug-template').use('pug-plain-loader') */
+              {
+                loader: 'pug-plain-loader'
+              }
+            ]
+          }
+        ],
+        use: [
+          /* config.module.rule('pug').use('pug-plain-loader') */
+          {
+            loader: 'pug-plain-loader'
           }
         ]
       },
@@ -454,7 +482,7 @@
                     renderSync: function () {
                       return _call(f, Array.prototype.slice.apply(arguments));
                     },
-                    info: 'dart-sass\t1.23.3\t(Sass Compiler)\t[Dart]\ndart2js\t2.5.2\t(Dart Compiler)\t[Dart]',
+                    info: 'dart-sass\t1.23.7\t(Sass Compiler)\t[Dart]\ndart2js\t2.6.1\t(Dart Compiler)\t[Dart]',
                     types: {
                       Boolean: function () {
                         return _call(f, Array.prototype.slice.apply(arguments));
@@ -527,7 +555,7 @@
                     renderSync: function () {
                       return _call(f, Array.prototype.slice.apply(arguments));
                     },
-                    info: 'dart-sass\t1.23.3\t(Sass Compiler)\t[Dart]\ndart2js\t2.5.2\t(Dart Compiler)\t[Dart]',
+                    info: 'dart-sass\t1.23.7\t(Sass Compiler)\t[Dart]\ndart2js\t2.6.1\t(Dart Compiler)\t[Dart]',
                     types: {
                       Boolean: function () {
                         return _call(f, Array.prototype.slice.apply(arguments));
@@ -603,7 +631,7 @@
                     renderSync: function () {
                       return _call(f, Array.prototype.slice.apply(arguments));
                     },
-                    info: 'dart-sass\t1.23.3\t(Sass Compiler)\t[Dart]\ndart2js\t2.5.2\t(Dart Compiler)\t[Dart]',
+                    info: 'dart-sass\t1.23.7\t(Sass Compiler)\t[Dart]\ndart2js\t2.6.1\t(Dart Compiler)\t[Dart]',
                     types: {
                       Boolean: function () {
                         return _call(f, Array.prototype.slice.apply(arguments));
@@ -675,7 +703,7 @@
                     renderSync: function () {
                       return _call(f, Array.prototype.slice.apply(arguments));
                     },
-                    info: 'dart-sass\t1.23.3\t(Sass Compiler)\t[Dart]\ndart2js\t2.5.2\t(Dart Compiler)\t[Dart]',
+                    info: 'dart-sass\t1.23.7\t(Sass Compiler)\t[Dart]\ndart2js\t2.6.1\t(Dart Compiler)\t[Dart]',
                     types: {
                       Boolean: function () {
                         return _call(f, Array.prototype.slice.apply(arguments));
@@ -757,7 +785,7 @@
                     renderSync: function () {
                       return _call(f, Array.prototype.slice.apply(arguments));
                     },
-                    info: 'dart-sass\t1.23.3\t(Sass Compiler)\t[Dart]\ndart2js\t2.5.2\t(Dart Compiler)\t[Dart]',
+                    info: 'dart-sass\t1.23.7\t(Sass Compiler)\t[Dart]\ndart2js\t2.6.1\t(Dart Compiler)\t[Dart]',
                     types: {
                       Boolean: function () {
                         return _call(f, Array.prototype.slice.apply(arguments));
@@ -833,7 +861,7 @@
                     renderSync: function () {
                       return _call(f, Array.prototype.slice.apply(arguments));
                     },
-                    info: 'dart-sass\t1.23.3\t(Sass Compiler)\t[Dart]\ndart2js\t2.5.2\t(Dart Compiler)\t[Dart]',
+                    info: 'dart-sass\t1.23.7\t(Sass Compiler)\t[Dart]\ndart2js\t2.6.1\t(Dart Compiler)\t[Dart]',
                     types: {
                       Boolean: function () {
                         return _call(f, Array.prototype.slice.apply(arguments));
@@ -912,7 +940,7 @@
                     renderSync: function () {
                       return _call(f, Array.prototype.slice.apply(arguments));
                     },
-                    info: 'dart-sass\t1.23.3\t(Sass Compiler)\t[Dart]\ndart2js\t2.5.2\t(Dart Compiler)\t[Dart]',
+                    info: 'dart-sass\t1.23.7\t(Sass Compiler)\t[Dart]\ndart2js\t2.6.1\t(Dart Compiler)\t[Dart]',
                     types: {
                       Boolean: function () {
                         return _call(f, Array.prototype.slice.apply(arguments));
@@ -987,7 +1015,7 @@
                     renderSync: function () {
                       return _call(f, Array.prototype.slice.apply(arguments));
                     },
-                    info: 'dart-sass\t1.23.3\t(Sass Compiler)\t[Dart]\ndart2js\t2.5.2\t(Dart Compiler)\t[Dart]',
+                    info: 'dart-sass\t1.23.7\t(Sass Compiler)\t[Dart]\ndart2js\t2.6.1\t(Dart Compiler)\t[Dart]',
                     types: {
                       Boolean: function () {
                         return _call(f, Array.prototype.slice.apply(arguments));
@@ -1349,7 +1377,7 @@
             loader: 'cache-loader',
             options: {
               cacheDirectory: '/Users/klemenka/PROJECTS/FINAL_PROJECTS/amada-workspace/node_modules/.cache/babel-loader',
-              cacheIdentifier: 'd3c66c06'
+              cacheIdentifier: '7443c546'
             }
           },
           /* config.module.rule('js').use('babel-loader') */
@@ -1374,138 +1402,25 @@
               extensions: [
                 '.js',
                 '.jsx',
-                '.vue',
-                '.ts',
-                '.tsx'
+                '.vue'
               ],
               cache: true,
-              cacheIdentifier: '7b7c6cb2',
+              cacheIdentifier: '4c5ce52f',
               emitWarning: false,
               emitError: false,
               eslintPath: '/Users/klemenka/PROJECTS/FINAL_PROJECTS/amada-workspace/node_modules/eslint',
-              formatter: function (results) {
-                  let errors = 0;
-                  let warnings = 0;
-                  let fixableErrors = 0;
-                  let fixableWarnings = 0;
-              
-                  const resultsWithMessages = results.filter(result => result.messages.length > 0);
-              
-                  let output = resultsWithMessages.reduce((resultsOutput, result) => {
-                      const messages = result.messages.map(message => `${formatMessage(message, result)}\n\n`);
-              
-                      errors += result.errorCount;
-                      warnings += result.warningCount;
-                      fixableErrors += result.fixableErrorCount;
-                      fixableWarnings += result.fixableWarningCount;
-              
-                      return resultsOutput.concat(messages);
-                  }, []).join("\n");
-              
-                  output += "\n";
-                  output += formatSummary(errors, warnings, fixableErrors, fixableWarnings);
-              
-                  return (errors + warnings) > 0 ? output : "";
-              }
+              formatter: function () { /* omitted long function */ }
             }
           }
         ]
       },
-      /* config.module.rule('ts') */
+      /* config.module.rule('inline-svg') */
       {
-        test: /\.ts$/,
+        test: /icons\/(.*)\.svg/,
         use: [
-          /* config.module.rule('ts').use('cache-loader') */
+          /* config.module.rule('inline-svg').use('vue-svg-loader') */
           {
-            loader: 'cache-loader',
-            options: {
-              cacheDirectory: '/Users/klemenka/PROJECTS/FINAL_PROJECTS/amada-workspace/node_modules/.cache/ts-loader',
-              cacheIdentifier: '2f5128ef'
-            }
-          },
-          /* config.module.rule('ts').use('babel-loader') */
-          {
-            loader: 'babel-loader'
-          },
-          /* config.module.rule('ts').use('ts-loader') */
-          {
-            loader: 'ts-loader',
-            options: {
-              transpileOnly: true,
-              appendTsSuffixTo: [
-                '\\.vue$'
-              ],
-              happyPackMode: false
-            }
-          }
-        ]
-      },
-      /* config.module.rule('tsx') */
-      {
-        test: /\.tsx$/,
-        use: [
-          /* config.module.rule('tsx').use('cache-loader') */
-          {
-            loader: 'cache-loader',
-            options: {
-              cacheDirectory: '/Users/klemenka/PROJECTS/FINAL_PROJECTS/amada-workspace/node_modules/.cache/ts-loader',
-              cacheIdentifier: '2f5128ef'
-            }
-          },
-          /* config.module.rule('tsx').use('babel-loader') */
-          {
-            loader: 'babel-loader'
-          },
-          /* config.module.rule('tsx').use('ts-loader') */
-          {
-            loader: 'ts-loader',
-            options: {
-              transpileOnly: true,
-              happyPackMode: false,
-              appendTsxSuffixTo: [
-                '\\.vue$'
-              ]
-            }
-          }
-        ]
-      },
-      /* config.module.rule('pug') */
-      {
-        test: /\.pug$/,
-        oneOf: [
-          /* config.module.rule('pug').oneOf('vue-loader') */
-          {
-            resourceQuery: /^\?vue/,
-            use: [
-              /* config.module.rule('pug').oneOf('vue-loader').use('pug-plain') */
-              {
-                loader: 'pug-plain-loader'
-              }
-            ]
-          },
-          /* config.module.rule('pug').oneOf('raw-pug-files') */
-          {
-            use: [
-              /* config.module.rule('pug').oneOf('raw-pug-files').use('pug-raw') */
-              {
-                loader: 'raw-loader'
-              },
-              /* config.module.rule('pug').oneOf('raw-pug-files').use('pug-plain') */
-              {
-                loader: 'pug-plain-loader'
-              }
-            ]
-          }
-        ]
-      },
-      /* config.module.rule('storysource') */
-      {
-        test: /\.stories\.js?$/,
-        enforce: 'post',
-        use: [
-          /* config.module.rule('storysource').use('storysource') */
-          {
-            loader: '/Users/klemenka/PROJECTS/FINAL_PROJECTS/amada-workspace/node_modules/@storybook/addon-storysource/loader.js'
+            loader: 'vue-svg-loader'
           }
         ]
       }
@@ -1599,22 +1514,7 @@
     /* config.plugin('html') */
     new HtmlWebpackPlugin(
       {
-        templateParameters: (compilation, assets, pluginOptions) => {
-          // enhance html-webpack-plugin's built in template params
-          let stats
-          return Object.assign({
-            // make stats lazy as it is expensive
-            get webpack () {
-              return stats || (stats = compilation.getStats().toJson())
-            },
-            compilation: compilation,
-            webpackConfig: compilation.options,
-            htmlWebpackPlugin: {
-              files: assets,
-              options: pluginOptions
-            }
-          }, resolveClientEnv(options, true /* raw */))
-        },
+        templateParameters: function () { /* omitted long function */ },
         template: '/Users/klemenka/PROJECTS/FINAL_PROJECTS/amada-workspace/public/index.html'
       }
     ),
@@ -1652,20 +1552,11 @@
           ]
         }
       ]
-    ),
-    /* config.plugin('fork-ts-checker') */
-    new ForkTsCheckerWebpackPlugin(
-      {
-        vue: true,
-        tslint: false,
-        formatter: 'codeframe',
-        checkSyntacticErrors: false
-      }
     )
   ],
   entry: {
     app: [
-      './src/main.ts'
+      './src/main.js'
     ]
   }
 }

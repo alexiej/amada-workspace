@@ -1,36 +1,22 @@
 module.exports = {
   root: true,
   env: {
-    node: true,
-    jest: true
+    node: true
   },
-  'extends': [
-    'plugin:vue/essential',
-    'eslint:recommended',
-    '@vue/typescript'
-  ],
+  extends: ["plugin:vue/essential", "@vue/prettier"],
   rules: {
-    'no-console': 'off',
-    'no-debugger': 'off',
-    'no-unreachable': 'off',
-    'no-empty': 'off',
-    'no-func-assign': 'off',
-    'no-unreachable': 'off',
-    'getter-return': 'off',
-    'no-unsafe-finally': 'off',
-    'no-mixed-spaces-and-tabs': 'off'
+    "no-console": process.env.NODE_ENV === "production" ? "error" : "off",
+    "no-debugger": process.env.NODE_ENV === "production" ? "error" : "off"
   },
   parserOptions: {
-    parser: '@typescript-eslint/parser'
+    parser: "babel-eslint"
   },
   overrides: [
     {
-      files: [
-        '**/__tests__/*.{j,t}s?(x)'
-      ],
+      files: ["**/__tests__/*.{j,t}s?(x)"],
       env: {
         mocha: true
       }
     }
   ]
-}
+};
