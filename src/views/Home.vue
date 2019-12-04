@@ -2,11 +2,16 @@
   transition(name="slide")
     #home.content
       router-link#info(to="/about", class="bar", tag="button")
-        i.fas.fa-info-circle
+        img(src="../assets/icons/help.png")
       h1 Amada Workspace
       h2 What you want to do?
       #items
-        card
+        //- img(src="@/assets/images/doc.svg")
+        card(src="@/assets/images/doc.svg", 
+              title="New Document", 
+              @click="document",
+              action="create",
+               description="Create a new template (amada) document that you can play in playground.")
 </template>
 
 <script>
@@ -19,6 +24,13 @@ export default {
   name: "home",
   components: {
     Card
+  },
+  methods: {
+    document() {
+      this.$router.push('/doc')
+
+      // console.log('aa')
+    }
   }
 };
 </script>

@@ -1,7 +1,7 @@
 <template>
  <div id="app">
     <div id="left-bar">
-      <router-link to="/" class="bar" tag="button"><unicorn/></router-link>
+       <router-link to="/" class="bar" tag="button"><unicorn/></router-link>
        <router-link to="/about" class="bar"  tag="button"><docs/></router-link>
     </div>
 
@@ -29,6 +29,11 @@ import docs from './assets/icons/docs.svg'
 
 export default {
   name: "app",
+  data() {
+    return {
+      page: 'dasbhoard'
+    }
+  },
   components: {
     unicorn,
     docs
@@ -74,7 +79,7 @@ export default {
 
 #left-bar {
   background: $grey-bar;
-   overflow: hidden;
+  overflow: hidden;
   position: sticky;
   top: 0;
    height: 100%; /* Full-height: remove this if you want "auto" height */

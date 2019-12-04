@@ -13,22 +13,28 @@ button {
     border-radius: 5px;
     color: $primary-dark;
     // font-weight: bold;
-    min-width: 290px;
+    min-width: 180px;
 
     font-size: $text-x-small;
 
-    transition: all 0.3s;
+    // transition: all 0.3;
+    // transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+    // box-shadow: 0 0 5px 5px $grey;
 
-    transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+    -webkit-transition: 0.3s ease-in-out;
+    -moz-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
 
     &:hover {
-      box-shadow: 0 0 40px 40px $primary inset;
+      box-shadow: 0 0  40px 40px $primary inset;
       color: $white;
       outline: 0;
+      // transform: scale(1.10)
     }
 
     &:active {
-        transform: scale(0.95);
+      transform: scale(0.95)
       }
 
     // &:focus {
@@ -53,6 +59,23 @@ button.bar {
     transition: none;
 
 
+    -webkit-transition: 0.1s ease-in-out;
+    -moz-transition: 0.1s ease-in-out;
+    -o-transition: 0.1s ease-in-out;
+    transition: 0.1s ease-in-out;
+
+    &.router-link-exact-active {
+       color: $primary;
+       fill: $primary-dark;
+       border-left: 4px solid $primary-dark;
+
+       > svg, .svg-inline--fa {
+        padding-left: 4px;
+       }
+
+    }
+
+
     > svg, .svg-inline--fa {
         width: $icon-width;
         height: $icon-width;
@@ -64,6 +87,8 @@ button.bar {
         background: transparent !important;
         color: $primary !important;
         fill: $primary;
+        border-left: none;
+        transform: scale(1.10);
         // color: $primary;
         // transform: skewX(2);
         // box-shadow: 0 0 40px 40px $primary inset;
@@ -73,7 +98,8 @@ button.bar {
 
 
       &:active {
-        transform: scale(0.75);
+        transform: scale(0.85);
+        border-left: none;
       }
     
 }
