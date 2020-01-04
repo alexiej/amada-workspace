@@ -7,29 +7,18 @@
 
     <div id="view" class="view">
       <vue-page-transition name="fade">
-      <!-- <transition name="slide"> -->
          <router-view/>
       </vue-page-transition>
-      <!-- </transition> -->
-<!--       
-      <button>
-        <i class="fas fa-university"></i>
-        This is button
-      </button>nicotn
-      <div class="round">This is text</div> -->
-      <!-- <HelloWorld class="content" msg="Welcome to Your Vue.js App" /> -->
     </div>
   </div>
 </template>
-
 <script>
-import './router';
-import unicorn from "./assets/icons/unicorn.svg";
+import unicorn from './assets/icons/unicorn.svg'
 import docs from './assets/icons/docs.svg'
 
 export default {
-  name: "app",
-  data() {
+  name: 'app',
+  data () {
     return {
       page: 'dasbhoard'
     }
@@ -38,20 +27,11 @@ export default {
     unicorn,
     docs
   }
-};
+}
 </script>
 
 <style lang="scss">
 @import "@/scss/base.scss";
-
-
-// #app {
-//   font-family: 'Avenir', Helvetica, Arial, sans-serif;
-//   -webkit-font-smoothing: antialiased;
-//   -moz-osx-font-smoothing: grayscale;
-//   text-align: center;
-//   color: #2c3e50;
-// }
 
 #nav {
   padding: 30px;
@@ -65,7 +45,6 @@ export default {
     }
   }
 }
-
 
 #app {
   width: 100%;

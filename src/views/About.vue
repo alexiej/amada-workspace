@@ -1,5 +1,6 @@
 <template lang="pug">
   #about.content
+    img#logo(src='../assets/logo.png',width=200,height=200)
     h1 About
     h2 Information about Amada Workspace
     p Amada Workspace is a free Open Source Software Licenced under MIT standard licence
@@ -34,6 +35,11 @@
 #about {
   text-align: center;
   margin: 4rem;
+
+  img#logo {
+    margin:auto;
+    margin-bottom: 2rem;
+  }
 
   p {
     padding: 1rem;

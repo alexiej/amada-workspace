@@ -9,12 +9,12 @@
 </template>
 <script>
 export default {
-    data() {
-        return {
-            hello: 'dsfds'
-        }
-    },
-    props: ['title', 'description', 'src', 'action']
+  data () {
+    return {
+      hello: 'dsfds'
+    }
+  },
+  props: ['title', 'description', 'src', 'action']
 }
 </script>
 <style lang="scss">
@@ -29,7 +29,7 @@ export default {
     grid-template-columns: minmax(64px, 64px) auto auto;
     grid-template-rows: auto 1fr auto;
     grid-template-areas: "img  title title"
-                         "img  description description" 
+                         "img  description description"
                          "img _ button";
 
     &:hover {
@@ -55,13 +55,11 @@ export default {
 
         // align-items: center;
 
-
         img {
             width: 64px;
             height: 64px;
         }
     }
-
 
     .button {
         grid-area: button;

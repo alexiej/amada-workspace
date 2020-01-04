@@ -6,9 +6,8 @@
       h1 Amada Workspace
       h2 What you want to do?
       #items
-        //- img(src="@/assets/images/doc.svg")
-        card(src="@/assets/images/doc.svg", 
-              title="New Document", 
+        card(src="@/assets/images/doc.svg",
+              title="New Document",
               @click="document",
               action="create",
                description="Create a new template (amada) document that you can play in playground.")
@@ -21,18 +20,18 @@ import Card from '@/components/Card.vue'
 // import HelloWorld from "@/components/HelloWorld.vue";
 
 export default {
-  name: "home",
+  name: 'home',
   components: {
     Card
   },
   methods: {
-    document() {
+    document () {
       this.$router.push('/doc')
 
       // console.log('aa')
     }
   }
-};
+}
 </script>
 <style lang="scss">
 #home {
@@ -53,7 +52,6 @@ export default {
     display: flex;
     justify-content: center;
   }
-
 
 }
 

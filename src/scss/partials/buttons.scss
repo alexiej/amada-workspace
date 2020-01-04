@@ -45,6 +45,43 @@ button {
 
 }
 
+button.small {
+  min-width: auto;
+  font-size: $text-xx-small;
+  padding: 0.5rem;
+  margin: 0;
+  margin-left: 0.5rem;
+  // background: $white;
+  color: $grey;
+  border: 1px solid $grey;
+
+
+  &:hover , > svg:hover, .svg-inline--fa.fa-w-16:hover {
+      color: $white;
+
+      // border: 1px solid $primary;
+  }
+
+  &:active {
+    transform: scale(0.75);
+  }
+}
+
+button.red-button {
+  color: $error;
+  border-color: $error;
+
+  &:hover , > svg:hover, .svg-inline--fa.fa-w-16:hover {
+      color: $white;
+      background-color: $error !important;
+      border: $error;
+      box-shadow: none;
+
+
+  }
+
+}
+
 
 button.bar {
     width: $icon-width;
