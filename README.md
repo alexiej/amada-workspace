@@ -4,9 +4,15 @@
 
 Project in the concept stage of how to manage the whole bunch of additional stuff in the project, without knowing the tools.
 
-# Download
+# Download 
 
 
+
+![assets/amada-view.gif](assets/amada-view.gif)
+
+### ⚠ <span style="color:red">This is the pre-release version of the software</span>
+
+[![download for mac](assets/download-mac.png)](https://github.com/alexiej/amada-workspace/releases/download/alpha-01/amada-workspace-0.1.0.dmg)
 
 # Project Planned Features
 
@@ -33,7 +39,6 @@ Project in the concept stage of how to manage the whole bunch of additional stuf
 
 
 # Licence
-
 
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Falexiej%2Famada-workspace.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Falexiej%2Famada-workspace?ref=badge_large)
 
