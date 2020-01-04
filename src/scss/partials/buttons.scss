@@ -1,0 +1,142 @@
+// extenders
+.animate {
+    transition: all 0.3s;
+}
+
+button {
+    margin: 0.5rem;
+    padding: 0.7rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border: 1px solid $primary;
+    background: $white;
+    border-radius: 5px;
+    color: $primary-dark;
+    // font-weight: bold;
+    min-width: 180px;
+
+    font-size: $text-x-small;
+
+    // transition: all 0.3;
+    // transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+    // box-shadow: 0 0 5px 5px $grey;
+
+    -webkit-transition: 0.3s ease-in-out;
+    -moz-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+
+    &:hover {
+      box-shadow: 0 0  40px 40px $primary inset;
+      color: $white;
+      outline: 0;
+      // transform: scale(1.10)
+    }
+
+    &:active {
+      transform: scale(0.95)
+      }
+
+    // &:focus {
+    //   background: $primary;
+    //   color: $white;
+    //   outline: 0;
+    // }
+
+}
+
+button.small {
+  min-width: auto;
+  font-size: $text-xx-small;
+  padding: 0.5rem;
+  margin: 0;
+  margin-left: 0.5rem;
+  // background: $white;
+  color: $grey;
+  border: 1px solid $grey;
+
+
+  &:hover , > svg:hover, .svg-inline--fa.fa-w-16:hover {
+      color: $white;
+
+      // border: 1px solid $primary;
+  }
+
+  &:active {
+    transform: scale(0.75);
+  }
+}
+
+button.red-button {
+  color: $error;
+  border-color: $error;
+
+  &:hover , > svg:hover, .svg-inline--fa.fa-w-16:hover {
+      color: $white;
+      background-color: $error !important;
+      border: $error;
+      box-shadow: none;
+
+
+  }
+
+}
+
+
+button.bar {
+    width: $icon-width;
+    height: $icon-width;
+    border: 0px;
+    padding: 0;
+    margin: 0;
+    min-width: auto;
+    border-radius: 0;
+    background: transparent;
+    color: $grey-dark;
+    transition: none;
+
+
+    -webkit-transition: 0.1s ease-in-out;
+    -moz-transition: 0.1s ease-in-out;
+    -o-transition: 0.1s ease-in-out;
+    transition: 0.1s ease-in-out;
+
+    &.router-link-exact-active {
+       color: $primary;
+       fill: $primary-dark;
+       border-left: 4px solid $primary-dark;
+
+       > svg, .svg-inline--fa {
+        padding-left: 4px;
+       }
+
+    }
+
+
+    > svg, .svg-inline--fa {
+        width: $icon-width;
+        height: $icon-width;
+        padding: 8px;
+    }
+
+    &:hover, > svg:hover, .svg-inline--fa.fa-w-16:hover {
+        box-shadow: none;
+        background: transparent !important;
+        color: $primary !important;
+        fill: $primary;
+        border-left: none;
+        transform: scale(1.10);
+        // color: $primary;
+        // transform: skewX(2);
+        // box-shadow: 0 0 40px 40px $primary inset;
+        // color: $white;
+        outline: 0;
+      }
+
+
+      &:active {
+        transform: scale(0.85);
+        border-left: none;
+      }
+    
+}
