@@ -10,7 +10,7 @@ Project in the concept stage of how to manage the whole bunch of additional stuf
 
 ### ⚠ <span style="color:red">This is the pre-release version of the software</span>
 
-[![download for mac](assets/download-mac.png)](https://github.com/alexiej/amada-workspace/releases/download/alpha-01/amada-workspace-0.1.0.dmg)
+[![download for mac](assets/download-mac.png)](https://github.com/alexiej/amada-workspace/releases/download/v0.2alpha/amada-workspace-0.2.0.dmg)
 
 ### Features (AMADA Workspace v0.2 alpha):
 
