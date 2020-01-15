@@ -3,6 +3,15 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Doc from '../views/Document.vue'
 
+VueRouter.duplicationErroringPush = VueRouter.push
+VueRouter.push = async function (location) {
+  return router.duplicationErroringPush(location).catch((error) => {
+    if (error.name === 'NavigationDuplicated') {
+      return this.currentRoute
+    }
+    throw error
+  })
+}
 Vue.use(VueRouter)
 
 const routes = [
@@ -27,7 +36,9 @@ const routes = [
 ]
 
 const router = new VueRouter({
-  routes
+  routes,
+  // mode: 'history',
+  duplicateNavigationPolicy: 'reload'
 })
 
 export default router

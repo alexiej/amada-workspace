@@ -5,7 +5,10 @@
     //- img(:src="src")
     h4.title {{title}}
     span.description {{description}}
-    button.button(@click="$emit('click')") {{action}}
+    .button
+        button(v-if="action3!=''",@click="$emit('click3')") {{action3}}
+        button(v-if="action2!=''",@click="$emit('click2')") {{action2}}
+        button(@click="$emit('click')") {{action}}
 </template>
 <script>
 export default {
@@ -14,7 +17,18 @@ export default {
       hello: 'dsfds'
     }
   },
-  props: ['title', 'description', 'src', 'action']
+  props: {
+    'title': {},
+    'description': {},
+    'src': {},
+    'action': {},
+    'action2': {
+      default: ''
+    },
+    'action3': {
+      default: ''
+    }
+  }
 }
 </script>
 <style lang="scss">
@@ -30,7 +44,7 @@ export default {
     grid-template-rows: auto 1fr auto;
     grid-template-areas: "img  title title"
                          "img  description description"
-                         "img _ button";
+                         "img button button";
 
     &:hover {
         border: 1px solid $primary;
@@ -63,6 +77,7 @@ export default {
 
     .button {
         grid-area: button;
+        justify-self: right;
     }
 
 }

@@ -14,6 +14,39 @@ Project in the concept stage of how to manage the whole bunch of additional stuf
 
 [![download for mac](assets/download-mac.png)](https://github.com/alexiej/amada-workspace/releases/download/alpha-01/amada-workspace-0.1.0.dmg)
 
+### Features (AMADA Workspace v0.2 alpha):
+
+* Edit files like blocks, and save files to .amada JSON format
+* Available blocks
+  * Headers
+  * Tables
+  * Images from Clipboard
+  * Code
+  * Paragraphs
+  * Lists
+  * Todo lists
+* Outline view
+* Files view
+* Drag&Drop files
+
+### Next version planned features:
+
+* Export to .md (markdown format), and .pdf format
+* Import .md format (markdown format)
+* Better code writing
+  * Header - format code like in markdown (#, ## etc.. creates a markdown)
+  * Code - add language for the code (shortuct ````code` creates new code)
+  * Tables - beter tables editor
+  * Images - available for add images from drive
+* Add more shorcuts for better expierience
+* Assosiate .amada files
+* Reformat .amada files to other than JSON format for better read source.
+* Add source view of .amada file
+* Fix outline view, files view
+* Show last files in the main window
+* Add possibility to remove files from the list
+* Add search possibility
+
 # Project Planned Features
 
 ### Main View

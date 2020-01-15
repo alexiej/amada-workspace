@@ -2,8 +2,7 @@
 
 import { app, protocol, BrowserWindow } from 'electron'
 import {
-  createProtocol,
-  installVueDevtools
+  createProtocol
 } from 'vue-cli-plugin-electron-builder/lib'
 const isDevelopment = process.env.NODE_ENV !== 'production'
 
@@ -17,6 +16,7 @@ protocol.registerSchemesAsPrivileged([{ scheme: 'app', privileges: { secure: tru
 function createWindow () {
   // Create the browser window.
   win = new BrowserWindow({ width: 800,
+    title: 'AMADA Workspace',
     height: 600,
     webPreferences: {
       nodeIntegration: true

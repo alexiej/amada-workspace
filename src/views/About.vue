@@ -31,6 +31,13 @@
       OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
       SOFTWARE.
 </template>
+<script>
+export default {
+  mounted () {
+    document.title = 'AMADA Workspace - About'
+  }
+}
+</script>
 <style lang="scss">
 #about {
   text-align: center;
