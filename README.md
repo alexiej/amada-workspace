@@ -6,8 +6,6 @@ Project in the concept stage of how to manage the whole bunch of additional stuf
 
 # Download 
 
-
-
 ![assets/amada-view.gif](assets/amada-view.gif)
 
 ### ⚠ <span style="color:red">This is the pre-release version of the software</span>
